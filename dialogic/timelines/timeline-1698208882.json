@@ -1,0 +1,62 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1697925157.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"audio_bus": "Master",
+			"background-music": "play",
+			"event_id": "dialogic_031",
+			"event_name": "BackgroundMusic",
+			"fade_length": 1,
+			"file": "res://SFX/65795__juskiddink__bonfire.wav",
+			"volume": 0
+		},
+		{
+			"character": "character-1697925157.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ah, dear stranger..."
+		},
+		{
+			"character": "character-1697925157.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I fear a terrible fate has befallen our village chief."
+		},
+		{
+			"character": "character-1697925157.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "He has now become some kind of demon..."
+		},
+		{
+			"character": "character-1697925157.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Please... put him to rest."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5",
+		"file": "timeline-1698208882.json",
+		"name": "convo3"
+	}
+}

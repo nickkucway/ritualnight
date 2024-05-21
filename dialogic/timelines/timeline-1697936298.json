@@ -1,0 +1,93 @@
+{
+	"events": [
+		{
+			"audio_bus": "Master",
+			"background-music": "play",
+			"event_id": "dialogic_031",
+			"event_name": "BackgroundMusic",
+			"fade_length": 1,
+			"file": "res://SFX/65795__juskiddink__bonfire.wav",
+			"volume": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_position": false,
+			"change_z_index": false,
+			"character": "character-1697925157.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1697925157.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ah, dear stranger..."
+		},
+		{
+			"character": "character-1697925157.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You have picked quite the night to wander into our village."
+		},
+		{
+			"character": "character-1697925157.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The poor bastards in this village have all lost their minds..."
+		},
+		{
+			"character": "character-1697925157.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "They've began tearing eachother apart."
+		},
+		{
+			"character": "character-1697925157.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It all started with the Village Chief."
+		},
+		{
+			"character": "character-1697925157.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "He discovered a crypt, deep beneath the old cemetary."
+		},
+		{
+			"character": "character-1697925157.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Please, good sir, investigate that damn  crypt."
+		},
+		{
+			"character": "character-1697925157.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "See if there is anyway to return these damned souls..."
+		},
+		{
+			"character": "character-1697925157.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "However.. I feel it is too late, for my dear village."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5",
+		"file": "timeline-1697936298.json",
+		"name": "convo1"
+	}
+}

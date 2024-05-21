@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://effects/Gib.tscn" type="PackedScene" id=2]
+[ext_resource path="res://effects/Gibs.gd" type="Script" id=3]
+
+[node name="Gibs" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="Gib" parent="." instance=ExtResource( 2 )]
+
+[node name="Gib2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.612815, 0.780532, 0.452606 )
+
+[node name="Gib5" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.877187, -0.181411, 1.46832, -0.353306 )
+
+[node name="Gib3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.431157, 0, -0.902277, 0.509978, 0.824946, 0.243695, 0.74433, -0.565212, 0.355681, 0.274756, 1.28629, -0.832325 )
+
+[node name="Gib4" parent="." instance=ExtResource( 2 )]
+transform = Transform( -1.7158, -0.0660095, -0.386191, -0.297115, -0.911605, 1.47586, -0.255389, 1.50402, 0.877587, -0.176121, 0.977242, 0.305257 )

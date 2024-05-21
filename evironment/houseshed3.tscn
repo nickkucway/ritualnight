@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://evironment/wallFortified.tscn" type="PackedScene" id=1]
+[ext_resource path="res://evironment/roof.tscn" type="PackedScene" id=2]
+[ext_resource path="res://evironment/wall_gate.tscn" type="PackedScene" id=3]
+
+[node name="houseshed3" type="Spatial"]
+
+[node name="wallFortified" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.975192, 0 )
+
+[node name="roof" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.96699, 0 )
+
+[node name="wallFortified2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.975192, 0.98054 )
+
+[node name="wallFortified3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00273, 0.975192, 0 )
+
+[node name="wallFortified5" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00273, -0.0138865, 0 )
+
+[node name="wallFortified6" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00273, -0.0138865, 0.98621 )
+
+[node name="wallFortified4" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.996184, 0.975192, 0.98054 )
+
+[node name="roof2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.96647, 0.98054 )
+
+[node name="wall_gate" parent="." instance=ExtResource( 3 )]
+
+[node name="wall_gate2" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.978026 )

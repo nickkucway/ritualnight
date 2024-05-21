@@ -1,0 +1,149 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://evironment/raw_assets/grass_lowres.png" type="Texture" id=1]
+[ext_resource path="res://evironment/shed.tscn" type="PackedScene" id=2]
+[ext_resource path="res://evironment/brickwall.tscn" type="PackedScene" id=3]
+[ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://characters/enemies/SpiderDemon.tscn" type="PackedScene" id=5]
+[ext_resource path="res://pickups/ChainsawPickup.tscn" type="PackedScene" id=6]
+[ext_resource path="res://pickups/MachineGunPickup.tscn" type="PackedScene" id=7]
+[ext_resource path="res://pickups/RocketLauncherPickup.tscn" type="PackedScene" id=8]
+[ext_resource path="res://pickups/ShotGunAmmoPickup.tscn" type="PackedScene" id=9]
+[ext_resource path="res://pickups/MachineGunAmmoPickup.tscn" type="PackedScene" id=10]
+[ext_resource path="res://pickups/RocketLauncherAmmoPickup.tscn" type="PackedScene" id=11]
+[ext_resource path="res://pickups/HealthPickup.tscn" type="PackedScene" id=12]
+[ext_resource path="res://pickups/ShotGunPickup.tscn" type="PackedScene" id=13]
+[ext_resource path="res://evironment/tree.tscn" type="PackedScene" id=17]
+
+[sub_resource type="CubeMesh" id=1]
+size = Vector3( 100, 2, 100 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_texture = ExtResource( 1 )
+metallic_specular = 0.0
+uv1_scale = Vector3( 50, 50, 1 )
+
+[sub_resource type="ConcavePolygonShape" id=3]
+data = PoolVector3Array( -50, 1, 50, 50, 1, 50, -50, -1, 50, 50, 1, 50, 50, -1, 50, -50, -1, 50, 50, 1, -50, -50, 1, -50, 50, -1, -50, -50, 1, -50, -50, -1, -50, 50, -1, -50, 50, 1, 50, 50, 1, -50, 50, -1, 50, 50, 1, -50, 50, -1, -50, 50, -1, 50, -50, 1, -50, -50, 1, 50, -50, -1, -50, -50, 1, 50, -50, -1, 50, -50, -1, -50, 50, 1, 50, -50, 1, 50, 50, 1, -50, -50, 1, 50, -50, 1, -50, 50, 1, -50, -50, -1, 50, 50, -1, 50, -50, -1, -50, 50, -1, 50, 50, -1, -50, -50, -1, -50 )
+
+[sub_resource type="NavigationMesh" id=4]
+vertices = PoolVector3Array( -37.453, 0.5, -38.661, -43.953, 0.5, -38.661, -43.953, 0.5, -28.411, -30.953, 0.5, -38.661, -37.453, 0.5, -38.661, -43.953, 0.5, -28.411, -24.453, 0.5, -38.661, -30.953, 0.5, -38.661, -43.953, 0.5, -28.411, -17.703, 0.5, -38.661, -24.453, 0.5, -38.661, -43.953, 0.5, -28.411, -17.703, 0.5, -38.661, -43.953, 0.5, -28.411, -43.953, 0.5, -17.911, -11.203, 0.5, -38.661, 6.047, 0.5, 1.339, 2.047, 0.5, -38.661, -4.453, 0.5, -38.661, -43.953, 0.5, -7.661, -43.953, 0.5, 2.839, 6.047, 0.5, 2.839, 6.547, 0.5, 0.839001, 8.797, 0.5, 0.589001, 8.797, 0.5, -38.661, 6.547, 0.5, 0.839001, 8.797, 0.5, -38.661, 2.047, 0.5, -38.661, 6.047, 0.5, 1.339, -4.453, 0.5, -38.661, -11.203, 0.5, -38.661, -43.953, 0.5, -17.911, -43.953, 0.5, -7.661, 11.297, 0.5, 0.839001, 11.797, 0.5, 1.839, 18.547, 0.5, 1.839, 11.297, 0.5, 0.839001, 18.547, 0.5, 1.839, 19.297, 0.5, 1.839, 19.297, 0.5, -38.661, 8.797, 0.5, -38.661, 8.797, 0.5, -38.661, 8.797, 0.5, 0.589001, 11.297, 0.5, 0.839001, 54.547, 0.5, -27.911, 54.547, 0.5, -38.661, 45.547, 0.5, -38.661, 54.547, 0.5, -27.911, 45.547, 0.5, -38.661, 36.797, 0.5, -38.661, 54.547, 0.5, -17.161, 54.547, 0.5, -27.911, 36.797, 0.5, -38.661, 28.047, 0.5, -38.661, 20.547, 0.5, 2.339, 20.547, 0.5, 4.339, 54.547, 0.5, 4.339, 54.547, 0.5, -6.411, 19.297, 0.5, 1.839, 20.547, 0.5, 2.339, 54.547, 0.5, -6.411, 54.547, 0.5, -17.161, 28.047, 0.5, -38.661, 19.297, 0.5, -38.661, 11.297, 0.5, 5.089, 8.547, 0.5, 5.089, 8.797, 0.5, 9.339, 11.797, 0.5, 4.589, 11.297, 0.5, 5.089, 8.797, 0.5, 9.339, 18.047, 0.5, 9.339, 18.047, 0.5, 2.339, 18.047, 0.5, 2.339, 18.547, 0.5, 1.839, 11.797, 0.5, 1.839, 11.797, 0.5, 4.589, 7.547, 4.25, 2.089, 7.547, 4.25, 3.839, 10.297, 4.25, 3.839, 10.297, 4.25, 2.089, 7.547, 4.75, 2.964, 10.297, 4.75, 2.964, 7.797, 0.5, 2.589, 7.797, 0.5, 3.339, 10.047, 0.5, 3.339, 10.047, 0.5, 2.589, 7.297, 0.5, 9.339, 8.797, 0.5, 9.339, 8.547, 0.5, 5.089, 6.547, 0.5, 5.089, 6.047, 0.5, 4.589, 6.047, 0.5, 2.839, -43.953, 0.5, 2.839, 7.297, 0.5, 9.339, 6.547, 0.5, 5.089, 6.047, 0.5, 4.589, -43.953, 0.5, 2.839, -43.953, 0.5, 10.589, 6.797, 0.5, 10.589, 20.547, 0.5, 9.339, 54.547, 0.5, 9.339, 54.547, 0.5, 4.339, 20.547, 0.5, 4.339, 45.297, 0.5, 59.839, 54.547, 0.5, 59.839, 54.547, 0.5, 53.339, 45.297, 0.5, 59.839, 54.547, 0.5, 53.339, 54.547, 0.5, 47.089, 45.297, 0.5, 59.839, 54.547, 0.5, 47.089, 54.547, 0.5, 40.839, 36.297, 0.5, 59.839, 45.297, 0.5, 59.839, 54.547, 0.5, 40.839, 54.547, 0.5, 34.589, 54.547, 0.5, 21.839, 20.047, 0.5, 11.839, 18.047, 0.5, 11.839, 18.047, 0.5, 59.839, 27.047, 0.5, 59.839, 54.547, 0.5, 28.089, 54.547, 0.5, 9.339, 20.547, 0.5, 9.339, 20.547, 0.5, 11.339, 54.547, 0.5, 15.589, 36.297, 0.5, 59.839, 54.547, 0.5, 34.589, 54.547, 0.5, 28.089, 27.047, 0.5, 59.839, 54.547, 0.5, 15.589, 20.547, 0.5, 11.339, 20.047, 0.5, 11.839, 54.547, 0.5, 21.839, -43.953, 0.5, 53.589, -43.953, 0.5, 59.839, -37.453, 0.5, 59.839, -43.953, 0.5, 47.339, -43.953, 0.5, 53.589, -37.453, 0.5, 59.839, -43.953, 0.5, 47.339, -37.453, 0.5, 59.839, -30.703, 0.5, 59.839, -43.953, 0.5, 41.089, 6.797, 0.5, 10.589, -43.953, 0.5, 10.589, -43.953, 0.5, 16.589, -43.953, 0.5, 41.089, -30.703, 0.5, 59.839, -24.203, 0.5, 59.839, -43.953, 0.5, 35.089, -4.203, 0.5, 59.839, 2.547, 0.5, 59.839, 7.297, 0.5, 11.839, -43.953, 0.5, 35.089, -24.203, 0.5, 59.839, -17.453, 0.5, 59.839, -43.953, 0.5, 28.839, -4.203, 0.5, 59.839, 7.297, 0.5, 11.839, 6.797, 0.5, 10.589, -43.953, 0.5, 16.589, -43.953, 0.5, 22.839, -10.953, 0.5, 59.839, -43.953, 0.5, 28.839, -17.453, 0.5, 59.839, -10.953, 0.5, 59.839, -43.953, 0.5, 22.839, 9.297, 0.5, 59.839, 9.297, 0.5, 11.839, 7.297, 0.5, 11.839, 2.547, 0.5, 59.839, 9.297, 0.5, 59.839, 18.047, 0.5, 59.839, 18.047, 0.5, 11.839, 9.297, 0.5, 11.839 )
+polygons = [ PoolIntArray( 2, 1, 0 ), PoolIntArray( 5, 4, 3 ), PoolIntArray( 8, 7, 6 ), PoolIntArray( 9, 11, 10 ), PoolIntArray( 12, 15, 13 ), PoolIntArray( 13, 15, 14 ), PoolIntArray( 16, 21, 17 ), PoolIntArray( 17, 21, 18 ), PoolIntArray( 18, 21, 19 ), PoolIntArray( 19, 21, 20 ), PoolIntArray( 24, 23, 22 ), PoolIntArray( 25, 28, 26 ), PoolIntArray( 26, 28, 27 ), PoolIntArray( 30, 29, 31 ), PoolIntArray( 31, 29, 32 ), PoolIntArray( 34, 33, 35 ), PoolIntArray( 37, 36, 38 ), PoolIntArray( 38, 36, 39 ), PoolIntArray( 39, 36, 40 ), PoolIntArray( 43, 42, 41 ), PoolIntArray( 46, 45, 44 ), PoolIntArray( 49, 48, 47 ), PoolIntArray( 52, 51, 53 ), PoolIntArray( 53, 51, 50 ), PoolIntArray( 55, 54, 56 ), PoolIntArray( 56, 54, 57 ), PoolIntArray( 59, 58, 60 ), PoolIntArray( 60, 58, 61 ), PoolIntArray( 61, 58, 62 ), PoolIntArray( 62, 58, 63 ), PoolIntArray( 66, 65, 64 ), PoolIntArray( 68, 67, 69 ), PoolIntArray( 69, 67, 70 ), PoolIntArray( 70, 67, 71 ), PoolIntArray( 73, 72, 74 ), PoolIntArray( 74, 72, 75 ), PoolIntArray( 79, 81, 76 ), PoolIntArray( 76, 81, 80 ), PoolIntArray( 80, 81, 78 ), PoolIntArray( 80, 78, 77 ), PoolIntArray( 85, 84, 82 ), PoolIntArray( 82, 84, 83 ), PoolIntArray( 87, 86, 88 ), PoolIntArray( 88, 86, 89 ), PoolIntArray( 92, 91, 90 ), PoolIntArray( 94, 93, 95 ), PoolIntArray( 95, 93, 98 ), PoolIntArray( 95, 98, 97 ), PoolIntArray( 95, 97, 96 ), PoolIntArray( 102, 101, 99 ), PoolIntArray( 99, 101, 100 ), PoolIntArray( 105, 104, 103 ), PoolIntArray( 108, 107, 106 ), PoolIntArray( 111, 110, 109 ), PoolIntArray( 114, 113, 115 ), PoolIntArray( 115, 113, 112 ), PoolIntArray( 117, 116, 118 ), PoolIntArray( 118, 116, 121 ), PoolIntArray( 118, 121, 120 ), PoolIntArray( 118, 120, 119 ), PoolIntArray( 123, 122, 124 ), PoolIntArray( 124, 122, 125 ), PoolIntArray( 127, 126, 128 ), PoolIntArray( 128, 126, 129 ), PoolIntArray( 131, 130, 132 ), PoolIntArray( 132, 130, 133 ), PoolIntArray( 136, 135, 134 ), PoolIntArray( 139, 138, 137 ), PoolIntArray( 141, 140, 142 ), PoolIntArray( 142, 140, 143 ), PoolIntArray( 146, 145, 144 ), PoolIntArray( 148, 147, 149 ), PoolIntArray( 149, 147, 150 ), PoolIntArray( 153, 152, 151 ), PoolIntArray( 154, 157, 155 ), PoolIntArray( 155, 157, 156 ), PoolIntArray( 159, 158, 160 ), PoolIntArray( 160, 158, 163 ), PoolIntArray( 160, 163, 162 ), PoolIntArray( 160, 162, 161 ), PoolIntArray( 164, 167, 165 ), PoolIntArray( 165, 167, 166 ), PoolIntArray( 169, 168, 170 ), PoolIntArray( 170, 168, 171 ), PoolIntArray( 175, 174, 172 ), PoolIntArray( 172, 174, 173 ) ]
+agent_height = 2.0
+agent_radius = 0.6
+agent_max_climb = 0.9
+
+[sub_resource type="ProceduralSky" id=5]
+sky_horizon_color = Color( 0.423529, 0.396078, 0.372549, 1 )
+sun_color = Color( 0.792157, 0.247059, 0.247059, 1 )
+
+[sub_resource type="Environment" id=6]
+background_mode = 2
+background_sky = SubResource( 5 )
+fog_enabled = true
+fog_sun_amount = 0.1
+fog_depth_begin = 67.1
+dof_blur_far_enabled = true
+dof_blur_far_distance = 150.0
+
+[node name="World" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000625849, 0.00835943, -0.00046587 )
+
+[node name="Environment" type="Spatial" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ground" type="MeshInstance" parent="Environment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.297, -1, 10.589 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 2 )
+
+[node name="StaticBody" type="StaticBody" parent="Environment/ground"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Environment/ground/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="brickwall" parent="Environment" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.59258, 0, 10.5891 )
+
+[node name="brickwall2" parent="Environment" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5926, 0, 10.5891 )
+
+[node name="brickwall3" parent="Environment" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5926, 0, 10.5891 )
+
+[node name="brickwall4" parent="Environment" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.2791, 0, 8.81296 )
+
+[node name="brickwall5" parent="Environment" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.2791, 0, 4.81296 )
+
+[node name="shed" parent="Environment" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.80395, 0, 3.08533 )
+
+[node name="tree" parent="Environment" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30.185 )
+
+[node name="tree2" parent="Environment" instance=ExtResource( 17 )]
+transform = Transform( 0.722726, 0, -0.691135, 0, 1, 0, 0.691135, 0, 0.722726, 20.1553, 0, 30.185 )
+
+[node name="tree3" parent="Environment" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.2596, 0, -21.1644 )
+
+[node name="tree4" parent="Environment" instance=ExtResource( 17 )]
+transform = Transform( 0.722726, 0, -0.691135, 0, 1, 0, 0.691135, 0, 0.722726, -8.10426, 0, -21.1644 )
+
+[node name="Navigation" type="Navigation" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="NavigationMeshInstance" type="NavigationMeshInstance" parent="Navigation"]
+navmesh = SubResource( 4 )
+
+[node name="Boss" parent="Navigation" instance=ExtResource( 5 )]
+transform = Transform( 1.92935, 0, 0, 0, 1.92935, 0, 0, 0, 1.92935, 0, 0, 0 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 6 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="WorldEnvironment"]
+transform = Transform( -0.941512, 0.19878, 0.272107, 0, -0.807486, 0.589887, 0.33698, 0.555385, 0.760257, -89.1877, 107.011, 32.6195 )
+light_color = Color( 0.968627, 0.905882, 0.627451, 1 )
+shadow_enabled = true
+shadow_bias = 0.709
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.74656, 0, -5.76739 )
+
+[node name="gatling" parent="Player/Camera/WeaponManager/Weapons/MachineGun/Graphics/machinegun2" index="1"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0 )
+
+[node name="HealthPickup" parent="." instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.84724, 1, -9.57872 )
+
+[node name="ShotGunPickup" parent="." instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.23588, 1, -9.57872 )
+
+[node name="MachineGunPickup" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9333, 1, -9.57872 )
+
+[node name="ShotGunAmmoPickup" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6356, 1, -9.57872 )
+
+[node name="MachineGunAmmoPickup" parent="." instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.9221, 1, -9.57872 )
+
+[node name="RocketLauncherPickup" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.0102, 1, -9.57872 )
+
+[node name="RocketLauncherAmmoPickup" parent="." instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.8461, 1, -9.57872 )
+
+[node name="ChainSawnPickup" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25247, 1.51851, -9.86529 )
+
+[editable path="Player"]
+[editable path="Player/Camera/WeaponManager/Weapons/MachineGun/Graphics/machinegun2"]

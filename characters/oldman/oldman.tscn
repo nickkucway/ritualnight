@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://characters/oldman/oldman.glb" type="PackedScene" id=1]
+[ext_resource path="res://effects/fire.tscn" type="PackedScene" id=2]
+[ext_resource path="res://weapons/raw_assets/Wood.material" type="Material" id=3]
+
+[sub_resource type="BoxShape" id=2]
+
+[sub_resource type="CylinderMesh" id=1]
+radial_segments = 8
+
+[node name="oldman" instance=ExtResource( 1 )]
+
+[node name="StaticBody" type="StaticBody" parent="Armature/Skeleton/Cylinder" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Armature/Skeleton/Cylinder/StaticBody" index="0"]
+transform = Transform( 0.684152, 0, 0, 0, 1, 0, 0, 0, 0.431493, 0, 1.13727, 0.0848709 )
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "ArmatureAction"
+
+[node name="stump" type="MeshInstance" parent="." index="2"]
+transform = Transform( 0.210383, 0, 0, 0, 0.210383, 0, 0, 0, 0.210383, 0, 0.228617, 0.0519325 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 3 )
+
+[node name="bonfire" type="Spatial" parent="." index="3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.147317, -0.267879 )
+
+[node name="stump2" type="MeshInstance" parent="bonfire" index="0"]
+transform = Transform( 0.0542338, 0.223661, 0.00220833, -0.000994008, -0.0115623, 0.0698723, 0.0441095, -0.275258, -0.00114064, 0.0530289, 0.231061, 1.59222 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+material/0 = ExtResource( 3 )
+
+[node name="stump3" type="MeshInstance" parent="bonfire" index="1"]
+transform = Transform( -0.0209026, 0.328131, -0.0164827, 0.000460853, 0.0883756, 0.067712, 0.0667144, 0.102198, -0.00563203, -0.100218, 0.300173, 1.6298 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+material/0 = ExtResource( 3 )
+
+[node name="stump4" type="MeshInstance" parent="bonfire" index="2"]
+transform = Transform( -0.0391026, 0.109934, 0.00726376, 0.005382, -0.0266955, 0.0446588, 0.0222015, 0.200093, 0.00196735, 0.132172, 0.309136, 1.61143 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+material/0 = ExtResource( 3 )
+
+[node name="stump5" type="MeshInstance" parent="bonfire" index="3"]
+transform = Transform( 0.0166887, 0.21237, -0.00465988, 0.00247915, 0.0204399, 0.0450408, 0.0420265, -0.0855377, -0.000806537, 0.00958041, 0.319461, 1.46014 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+material/0 = ExtResource( 3 )
+
+[node name="fire" parent="bonfire" index="4" instance=ExtResource( 2 )]
+transform = Transform( 1.75343, 0, 0, 0, 1.75343, 0, 0, 0, 1.75343, 0, 0.733956, 1.54103 )
+
+[node name="OmniLight" type="OmniLight" parent="." index="4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.394628, 1.32985 )
+light_color = Color( 0.960784, 0.741176, 0.356863, 1 )

@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://effects/particle.png" type="Texture" id=1]
+[ext_resource path="res://effects/raw_assets/gib.glb" type="PackedScene" id=2]
+[ext_resource path="res://effects/Gib.gd" type="Script" id=3]
+
+[sub_resource type="SphereShape" id=6]
+
+[sub_resource type="SpatialMaterial" id=7]
+flags_transparent = true
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+albedo_texture = ExtResource( 1 )
+
+[sub_resource type="QuadMesh" id=5]
+
+[sub_resource type="Curve" id=2]
+_data = [ Vector2( 0, 0 ), 0.0, 4.26231, 0, 0, Vector2( 1, 0 ), -4.07441, 0.0, 0, 0 ]
+
+[node name="Gib" type="KinematicBody"]
+script = ExtResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 0.282421, 0, 0, 0, 0.282421, 0, 0, 0, 0.282421, 0, 0, 0 )
+shape = SubResource( 6 )
+
+[node name="gib" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.215845, 0, 0, 0, 0.215845, 0, 0, 0, 0.215845, 0, 0, 0 )
+
+[node name="Particles" type="CPUParticles" parent="."]
+transform = Transform( 0.998968, 0, 0, 0, 0.998968, 0, 0, 0, 0.998968, 0, 0, 0 )
+material_override = SubResource( 7 )
+amount = 20
+lifetime = 1.15
+local_coords = false
+mesh = SubResource( 5 )
+direction = Vector3( 0, 1, 0 )
+spread = 71.73
+initial_velocity = 1.5
+scale_amount = 0.4
+scale_amount_curve = SubResource( 2 )
+color = Color( 0.431373, 0, 0, 1 )
+
+[node name="HideParticlesAfterTimeTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="HideParticlesAfterTimeTimer" to="Particles" method="set_emitting" binds= [ false ]]

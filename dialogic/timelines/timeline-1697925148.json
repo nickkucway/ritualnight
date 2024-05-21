@@ -1,0 +1,80 @@
+{
+	"events": [
+		{
+			"audio_bus": "Master",
+			"background-music": "play",
+			"event_id": "dialogic_031",
+			"event_name": "BackgroundMusic",
+			"fade_length": 1,
+			"file": "res://SFX/65795__juskiddink__bonfire.wav",
+			"volume": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1697925157.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1697925157.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ah, dear stranger..."
+		},
+		{
+			"character": "character-1697925157.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Have you done battle with that wretched spider beast? "
+		},
+		{
+			"character": "character-1697925157.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "A demon of the night dwelling deep in this abyss."
+		},
+		{
+			"character": "character-1697925157.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Look here... sacrificed souls."
+		},
+		{
+			"character": "character-1697925157.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "They were some kind of offering."
+		},
+		{
+			"character": "character-1697925157.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What is our poor chief trying to do?"
+		},
+		{
+			"character": "character-1697925157.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I fear this night will end at the old ritual grounds..."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5",
+		"file": "timeline-1697925148.json",
+		"name": "convo2"
+	}
+}

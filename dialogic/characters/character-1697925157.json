@@ -1,0 +1,21 @@
+{
+	"color": "#ffffffff",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1697925157.json",
+	"mirror_portraits": false,
+	"name": "Oldman",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://UI/npcportraittransparent.png"
+		}
+	],
+	"scale": 18,
+	"theme": "theme-1697935657.cfg"
+}
